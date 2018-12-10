@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="header">
+            <div id="navbar" class="navbar">
+                <li class="about"><a href="/">About</a></li>
+                <li class="programming"><a href="/programming">Programming</a></li>
+                <li class="contact"><a href="#">Contact</a>
+                </li>
+                <li class="blog"><a href="#">Blog</a></li>
+            </div>
+        </div>
+        {% block content %} {% endblock %}
+        <div class="footer">
+            <div class="socials">
+                <a href="https://www.facebook.com/timothy.nilsson.5" class="facebook">
+                <a href="https://www.snapchat.com/add/timothyn00" class="snapchat"></a>
+                <a href="https://twitter.com/scallibur00" class="twitter"></a>
+                <a href="https://www.instagram.com/nilsson.timothy/" class="instagram"></a>
+                <a href="https://github.com/Hanker00" class="github"></a>
+            </div>
+            <div class="email">
+                <p>
+                    Email me with any suggestions, collaborations, or just to talk! nilsson.timothy@gmail.com
+                </p>
+            </div>
+        </div>
+        <script src="../../static/js/script.js"></script>
+</body>
+
+</html>
