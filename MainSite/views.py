@@ -7,5 +7,8 @@ def personal_first(request):
 def programming(request):
     return render(request, 'MainSite/programming.html', {})
 
+def construction(request):
+    return render(request, 'MainSite/under_construction.html', {})
+
 
 
