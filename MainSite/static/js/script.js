@@ -1,20 +1,14 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-} 
+$(document).ready(function() {
+	$(window).scroll(function() {
+  	if($(document).scrollTop() > 10) {
+    	$('#nav').addClass('shrink');
+    }
+    else {
+    $('#nav').removeClass('shrink');
+    }
+  });
+});
 
 $(function() {
   $('.material-icons').click (function() {
@@ -22,3 +16,11 @@ $(function() {
     return false;
   });
 });
+
+function toggleMenu(){
+  var element = document.querySelector(".menu");
+  element.classList.toggle("show");
+
+  element = document.querySelector(".fade-layer");
+  element.classList.toggle("fade");
+}

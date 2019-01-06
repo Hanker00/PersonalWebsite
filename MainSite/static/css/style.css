@@ -24,6 +24,97 @@ body {
     z-index: 0;
 }
 
+.navbar {
+    font-family: 'Montserrat', sans-serif; 
+    grid-row: 1/3;
+    grid-column: span 7;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: black;
+    opacity: 1;
+    transition: 0.2s;
+    height: 120px;
+}
+
+
+#nav {
+    background: transparent; // Transparent initial setting
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    transition: all ease .5s;
+}
+
+nav {
+    float: right;
+  }
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-column: 4/9;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    padding-left: 10px;
+    grid-column: 1/4;
+    text-align: center;
+    grid-row: span 1;
+    letter-spacing: 10px;
+}
+
+#nav.shrink {
+    height: 120px;
+    transition: all ease .5s;
+    background: black;
+    opacity: 0.5;
+}
+  
+#nav.shrink #logo {
+    padding: 10px;
+    transition: all ease .5s;
+}
+
+
 .footer {
     grid-row: 46/49;
     grid-column: span 7;
@@ -112,35 +203,6 @@ p {
     font-size: 20px;
 }
 
-.header {
-    grid-row: 1/4;
-    grid-column: span 7;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.navbar {
-    grid-column: span 4;
-    grid-row: span 5;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    text-decoration: none;
-    background-color: black;
-    opacity: 0.5;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 90px;
-    transition: 0.2s;
-    
-}
 
 ul {
     grid-column: span 4;
@@ -150,23 +212,6 @@ ul {
     grid-template-columns: repeat(4, 1fr);
     text-decoration: none; 
 }
-
-
-.navbar a{
-    display: inline-block;
-    width: 25%;
-    padding: .75rem 0;
-    opacity: 1;
-    margin: 0;
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-
-  }
-
-
-  
-  
 
 .about a{
     grid-row: span 5;
@@ -297,6 +342,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
+    padding-right: 50px;
 }
 
 .scroll {
@@ -317,6 +363,9 @@ ul {
     text-align: center;
 }
 
+#close {
+    display: none;
+}
 
 /* Here starts the css for programming.html */
 
@@ -390,4 +439,54 @@ ul {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+
+/* Here starts the css base.html for mobile view. */
+
+@media (max-width:480px)  {
+    
+    .show {
+        display: block;
+        transition: transform ease-out 0.5s;
+        position: absolute;
+        transform: translateX(0%);
+    }
+    .fade {
+        display: block;
+        opacity: 0.5;
+        transition: ease-out 1s;
+    }
+
+    #close {
+        color: black;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        font-size: 55px;
+    }
+
+    .navbar {
+        width: 50vw;
+        height: 100vh;
+        position: absolute;
+        background: white;
+        display: block;
+        transform: translateX(-100%);
+        text-align: left;
+        transition: transform ease-out 0.5s;
+    }
+
+    .fade-layer{
+        display: none;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        opacity: 0;
+    }
 }
