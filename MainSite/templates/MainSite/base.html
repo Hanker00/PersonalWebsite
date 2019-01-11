@@ -20,10 +20,10 @@
                 <i id="close" class="material-icons" close>close</i>
                 <h1 class="title">TIMOTHY NILSSON</h1>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="{% url 'personal_first' %}">Home</a></li>
+                    <li><a href="{% url 'programming' %}">About</a></li>
+                    <li><a href="{% url 'construction' %}">Contact</a></li>
+                    <li><a href="{% url 'construction' %}">Blog</a></li>
                 </ul>
             </nav>
         {% block content %} {% endblock %}

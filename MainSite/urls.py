@@ -2,8 +2,8 @@ from django.urls import path
 from django.conf.urls import url
 from . import views
 
-urlpatterns = [ 
-    url(r'^$', views.personal_first),
-    url(r'^programming/$', views.programming),
-    url(r'^construction/$', views.construction),
+urlpatterns = [
+    path('', views.personal_first, name='personal_first'),
+    path('programming/', views.programming, name='programming'),
+    path('construction/', views.construction, name='construction'),
 ]

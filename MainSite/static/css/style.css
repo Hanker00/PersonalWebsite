@@ -103,7 +103,7 @@ nav a:hover::before {
 }
 
 #nav.shrink {
-    height: 120px;
+    height: 94px;
     transition: all ease .5s;
     background: black;
     opacity: 0.5;
@@ -123,6 +123,7 @@ nav a:hover::before {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
+    overflow-y: hidden;
 }
 
 .journey {
@@ -190,9 +191,10 @@ nav a:hover::before {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     letter-spacing: 10px;
-    color: black;
+    color: white;
     padding-top: 10px;
 }
+
 
 p {
     grid-row: 15/19;
@@ -201,6 +203,10 @@ p {
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+}
+
+.text_about {
+    color: white;
 }
 
 
@@ -342,7 +348,6 @@ ul {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
-    padding-right: 50px;
 }
 
 .scroll {
@@ -406,14 +411,21 @@ ul {
 }
 
 .projects {
-    grid-row: 8/10;
+    grid-row: 13/14;
     grid-column: 2/7;
+    font-family: inherit;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-size: 30px;
+    padding-right: 130px;
+    color: black;
 }
 
 .TicTacToe {
     grid-row: 11/23;
     grid-column: 2/7;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Here starts the css for under_contruction.html */
